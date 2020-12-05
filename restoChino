@@ -1,0 +1,43 @@
+#Categorías
+x = 11
+y = 7
+z = 5
+#Sobras
+sobx = 3
+soby = 6
+sobz = 1
+
+#Número a dividir en dx, dy, dz para dar resto = 1
+num = 1
+
+mod = x * y * z
+print(mod)
+
+cx = mod/x
+cy = mod/y
+cz = mod/z
+print("cx",cx,"cy", cy, "cz", cz)
+
+while (cx*num)%x!=1:
+    num = num+1
+dx = num
+num = 1
+
+print("dx", dx)
+
+while (cy*num)%y!=1:
+    num = num+1
+dy = num
+num = 1
+
+print("dy", dy)
+
+while (cz*num)%z!=1:
+    num = num+1
+dz = num
+num = 1
+
+print("dz", dz)
+
+result = (sobx * cx * dx + soby * cy * dy + sobz * cz * dz) % mod
+print(result)
